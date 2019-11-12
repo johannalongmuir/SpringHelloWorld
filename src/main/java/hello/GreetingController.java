@@ -27,9 +27,9 @@ public class GreetingController {
     }
 
     @RequestMapping("/more")
-    public Greeting moreGreeting(@RequestParam(value="name", defaultValue="Noooooooo") String name) {
+    public Greeting moreGreeting(@RequestParam(value="name", defaultValue="I want???") String name) {
         return new Greeting(counter.incrementAndGet(),
-                String.format(template, name));
+                String.format(template, name + " moooreee"));
     }
 
     @RequestMapping("/stop")
@@ -37,5 +37,12 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                 name);
     }
+
+    @RequestMapping("/mattia")
+    public Greeting mattia(@RequestParam(value="name", defaultValue="Mattia") String name) {
+        return new Greeting(counter.incrementAndGet(),
+                String.format(template, name + " the king"));
+    }
+
 
 }
