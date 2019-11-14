@@ -15,9 +15,9 @@ public class GreetingController {
     /*
     HTTP requests to /greeting are mapped to the greeting()method
     The implementation of the method body creates and returns a new Greeting object with id and content attributes
-     based on the next value from the counter, and formats the given name by using the greeting template.
+    based on the next value from the counter, and formats the given name by using the greeting template.
+    Override default for first with  http://localhost:8080/greeting?name=Johanna
      */
-    // Override default for first with  http://localhost:8080/greeting?name=Johanna
 
 
     @RequestMapping("/greeting")
@@ -43,6 +43,8 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name + " the king"));
     }
+
+
 
 
 }

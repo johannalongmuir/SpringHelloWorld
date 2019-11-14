@@ -15,3 +15,8 @@ The Greeting object must be converted to JSON. Thanks to Spring’s HTTP message
 
 
 Although it is possible to package this service as a traditional WAR file for deployment to an external application server, the simpler approach demonstrated below creates a standalone application
+
+
+
+The @Controller is a common annotation which is used to mark a class as Spring MVC Controller while @RestController is a special controller used in RESTFul web services and the equivalent of @Controller + @ResponseBody
+

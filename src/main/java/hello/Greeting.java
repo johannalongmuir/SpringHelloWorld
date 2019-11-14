@@ -3,9 +3,8 @@ package hello;
 public class Greeting {
 
     // POJO for modeling the greeting representation
-
     private final long id;
-    private final String content;
+    private String content;
 
     public Greeting(long id, String content) {
         this.id = id;
@@ -20,4 +19,7 @@ public class Greeting {
         return content;
     }
 
+    public void setContent(String content) {
+        this.content = content;
+    }
 }
